@@ -76,22 +76,8 @@ if (!function_exists('add_scripts')) { // если ф-я уже есть в до
 	function add_scripts() { // добавление скриптов
 	    if(is_admin()) return false; // если мы в админке - ничего не делаем
 	    wp_deregister_script('jquery'); // выключаем стандартный jquery
-	    wp_enqueue_script('jquery','//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js','','',true); // добавляем свой
+	    wp_enqueue_script('jquery','//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js','','',true); // библиотека jQuery
 	    wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap.min.js','','',true); // бутстрап
-	    wp_enqueue_script('pretty-photo', get_template_directory_uri().'/js/jquery.prettyPhoto.min.js','','',true);
-	    wp_enqueue_script('video-lightbox', get_template_directory_uri().'/js/video-lightbox.js','','',true); 
-	    wp_enqueue_script('slick', get_template_directory_uri().'/js/slick.min.js','','',true); 
-	    wp_enqueue_script('informatica-connector', get_template_directory_uri().'/js/informatica.connector.js','','',true); 
-	    wp_enqueue_script('countdown', get_template_directory_uri().'/js/jquery.countdown.min.js','','',true); 
-	    wp_enqueue_script('cookie', get_template_directory_uri().'/js/js.cookie.js','','',true); 
-	    wp_enqueue_script('waypoints', get_template_directory_uri().'/js/jquery.waypoints.min.js','','',true); 
-	    wp_enqueue_script('jquery-cycle2', get_template_directory_uri().'/js/jquery.cycle2.min.js','','',true); 
-	    wp_enqueue_script('jquery-selectric', get_template_directory_uri().'/js/jquery.selectric.js','','',true); 
-	    wp_enqueue_script('jquery-equalizer', get_template_directory_uri().'/js/jquery.equalizer.min.js','','',true); 
-	    wp_enqueue_script('jquery-backstretch', get_template_directory_uri().'/js/jquery.backstretch.min.js','','',true); 
-	    wp_enqueue_script('velocity', get_template_directory_uri().'/js/velocity.min.js','','',true); 
-	    wp_enqueue_script('velocity-ui', get_template_directory_uri().'/js/velocity.ui.js','','',true); 
-	    wp_enqueue_script('jquery-magnific-popup', get_template_directory_uri().'/js/jquery.magnific-popup.min.js','','',true); 
 	    wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true); // и скрипты шаблона
 	}
 }
@@ -102,15 +88,6 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
 	    if(is_admin()) return false; // если мы в админке - ничего не делаем
 	    wp_enqueue_style( 'bs', get_template_directory_uri().'/css/bootstrap.min.css' ); // бутстрап
 	    wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css' );
-		wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' ); // основные стили шаблона
-		wp_enqueue_style( 'prettyphoto', get_template_directory_uri().'/css/prettyPhoto.css' ); // основные стили шаблона
-		wp_enqueue_style( 'videolightbox', get_template_directory_uri().'/css/wp-video-lightbox.css' );
-		wp_enqueue_style( 'logstyle', get_template_directory_uri().'/css/log-style.css' );
-		wp_enqueue_style( 'frontend', get_template_directory_uri().'/css/frontend.css' );
-		wp_enqueue_style( 'royalslider', get_template_directory_uri().'/css/royalslider.css' ); 
-		wp_enqueue_style( 'magnificpopup', get_template_directory_uri().'/css/magnific-popup.css' );
-		wp_enqueue_style( 'theme', get_template_directory_uri().'/css/theme.css' );
-		wp_enqueue_style( 'slick', get_template_directory_uri().'/css/slick.css' );
 		wp_enqueue_style( 'mainstyle', get_template_directory_uri().'/css/style.css' ); // основные стили шаблона
 	}
 }
