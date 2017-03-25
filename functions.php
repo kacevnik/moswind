@@ -87,7 +87,7 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
 	function add_styles() { // добавление стилей
 	    if(is_admin()) return false; // если мы в админке - ничего не делаем
 	    wp_enqueue_style( 'bs', get_template_directory_uri().'/css/bootstrap.min.css' ); // бутстрап
-	    wp_enqueue_style( 'font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css' );
+	    wp_enqueue_style( 'bs', get_template_directory_uri().'/css/font-awesome.min.css' ); //Шрифты
 		wp_enqueue_style( 'mainstyle', get_template_directory_uri().'/css/style.css' ); // основные стили шаблона
 	}
 }
